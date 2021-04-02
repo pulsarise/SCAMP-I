@@ -1,0 +1,9 @@
+"PSRJ","DATAREADDIR","DATAFILENAME","PERIOD","NBIN","DM_ORIG","CHAN","FREQ"
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,0,900
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,1,1000
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,2,1100
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,3,1200
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,4,1300
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,5,1400
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,6,1500
+"simulated_pulsar",".","simpsr.ascii",1.0,1024,0.0,7,1600
