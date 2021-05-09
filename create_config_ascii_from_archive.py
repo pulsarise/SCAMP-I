@@ -26,7 +26,7 @@ def archive_to_ascii(archive, outpath, nchan=None, verbose=False):
     pdv_Popen = subprocess.Popen(pdv_comand, shell=False, cwd=outpath, stdout=ascii_file)
     (stdoutdata, stderrdata) = pdv_Popen.communicate()
     if verbose == True:
-        print "Ascii saved as %s\n" %outname
+        print("Ascii saved as {}\n".format(outname))
     
     reduced_archive = inname
     saved_ascii = outname
