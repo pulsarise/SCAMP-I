@@ -59,7 +59,7 @@ export PYTHONPATH=$PYTHONPATH:$MYCODE
 You may also find it useful to add the following line of code in the bashrc/zshrc in order to be able to easily locate the software:
 
 ```bash
-export SCATTERMC=$MYCODE/SCAMP-I
+export SCAMPI=$MYCODE/SCAMP-I
 ```
 
 N.B. if you use csh rather than bash, the equivalent command to "export" in your cshrc is "setenv".

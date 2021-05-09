@@ -33,16 +33,16 @@ mkdir -p output/results/plots
 # RUN THE SCRIPTS
 ##################
 echo "Fitting for tau..."
-python $MYCODE/ScatterMC/run_scatter_mcmc.py -f ${configfile} -o logs/${basename}_inputlog.csv -w output/chains -t ${taumcruntime} -nw ${tau_nwalkers} -m ${model} --showprogress
-python $MYCODE/ScatterMC/check_tau_chains.py -i logs/${basename}_inputlog.csv -w output/diagnostic_plots
+python $MYCODE/SCAMP-I/run_scatter_mcmc.py -f ${configfile} -o logs/${basename}_inputlog.csv -w output/chains -t ${taumcruntime} -nw ${tau_nwalkers} -m ${model} --showprogress
+python $MYCODE/SCAMP-I/check_tau_chains.py -i logs/${basename}_inputlog.csv -w output/diagnostic_plots
 echo "Now check the chain diagnostic plots saved in the output/diagnostic_plots/ folder and decide whether they have passed or failed and what burnin to apply."
-python $MYCODE/ScatterMC/define_tau_passfail_burnin.py -i logs/${basename}_inputlog.csv -o ${basename}_outputlog.csv -w logs
-python $MYCODE/ScatterMC/parameter_extraction.py -i logs/${basename}_outputlog.csv -o ${basename}_output.csv -w output/results
+python $MYCODE/SCAMP-I/define_tau_passfail_burnin.py -i logs/${basename}_inputlog.csv -o ${basename}_outputlog.csv -w logs
+python $MYCODE/SCAMP-I/parameter_extraction.py -i logs/${basename}_outputlog.csv -o ${basename}_output.csv -w output/results
 echo "Fitting for alpha..."
-python $MYCODE/ScatterMC/alpha_mcmc.py -i output/results/${basename}_output.csv -o ${basename}_output.csv --sampleswritedir output/chains --resultswritedir output/results -t ${alphamcruntime} -nw ${alpha_nwalkers} --showprogress
-python $MYCODE/ScatterMC/check_alpha_chains.py -i output/results/${basename}_output.csv -w output/diagnostic_plots
+python $MYCODE/SCAMP-I/alpha_mcmc.py -i output/results/${basename}_output.csv -o ${basename}_output.csv --sampleswritedir output/chains --resultswritedir output/results -t ${alphamcruntime} -nw ${alpha_nwalkers} --showprogress
+python $MYCODE/SCAMP-I/check_alpha_chains.py -i output/results/${basename}_output.csv -w output/diagnostic_plots
 echo "Now check the alpha chain plots and decide what burnin fraction you want."
-python $MYCODE/ScatterMC/define_alpha_burnin.py -i output/results/${basename}_output.csv
-python $MYCODE/ScatterMC/best_fit_alpha_tau.py -i output/results/${basename}_output.csv
-python $MYCODE/ScatterMC/basic_plotting.py -f output/results/${basename}_output.csv -w output/results/plots
+python $MYCODE/SCAMP-I/define_alpha_burnin.py -i output/results/${basename}_output.csv
+python $MYCODE/SCAMP-I/best_fit_alpha_tau.py -i output/results/${basename}_output.csv
+python $MYCODE/SCAMP-I/basic_plotting.py -f output/results/${basename}_output.csv -w output/results/plots
 echo "Results and plots saved to directories."
