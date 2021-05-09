@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import pandas
 import math
 
-from SCAMP-I.data_handling import read_data, read_headerfull
-from SCAMP-I.model_functions import GxETrain, GxETrain1D
+from SCAMP_I.data_handling import read_data, read_headerfull
+from SCAMP_I.model_functions import GxETrain, GxETrain1D
 
 
 def plot_tausigspectrum(freqGHz, tausec, tauserrsec, sigma, sigma_error, alphaMC, alphaerrMC, ampMC):

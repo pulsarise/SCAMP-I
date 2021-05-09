@@ -49,7 +49,9 @@ The software is written in **python3** and requires the following dependencies, 
 * lmfit (to fit for a DM correction)
 * tqdm (optional: for the progress bar showing how much the MCMC run has progressed. This is only required if the command line option “--showprogress” is enabled for run_scatter_mcmc.py, or for alpha_mcmc.py)
 
-To use this software, download the source code and ensure that its parent directory is added to your python path. This can be done by adding the following to your bashrc/zshrc:
+To use this software, download the source code to a directory named **SCAMP_I**. Please ensure the directory name contains an underscore and not a dash so that the python scripts will be able to import functions from each other correctly.
+
+Ensure that its parent directory is added to your python path. This can be done by adding the following to your bashrc/zshrc:
 
 ```bash
 export MYCODE=path/to/parent/directory/ 
@@ -59,7 +61,7 @@ export PYTHONPATH=$PYTHONPATH:$MYCODE
 You may also find it useful to add the following line of code in the bashrc/zshrc in order to be able to easily locate the software:
 
 ```bash
-export SCAMPI=$MYCODE/SCAMP-I
+export SCAMPI=$MYCODE/SCAMP_I
 ```
 
 N.B. if you use csh rather than bash, the equivalent command to "export" in your cshrc is "setenv".

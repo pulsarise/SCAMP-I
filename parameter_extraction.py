@@ -5,7 +5,7 @@ import emcee
 import argparse
 import pandas
 
-from SCAMP-I.dmcorrcalc import get_old_new_DM
+from SCAMP_I.dmcorrcalc import get_old_new_DM
 
 def get_bestfit_params(flat_burned_samples, P0, nbins):
     # Get the best fit params out from the chains.
